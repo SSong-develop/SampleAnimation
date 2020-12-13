@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SampleFreeDot</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_programmer_text">프로그래머</string>
+    <string name="home_designer_text">디자이너</string>
+    <string name="home_planner_text">기획자</string>
+    <string name="profile_edit_text_hint">성장배경</string>
+    <string name="confirmation_apply_text">지원확인</string>
+</resources>

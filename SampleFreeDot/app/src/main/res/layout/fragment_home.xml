@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sample_background_color"
+        tools:context=".presentation.fragment.HomeFragment">
+
+        <TextView
+            android:id="@+id/home_programmer_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_programmer_text"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/white"
+            android:padding="8dp"
+            android:textColor="@color/main_color"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_programmer_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/home_programmer_text_view"
+            app:layout_constraintStart_toStartOf="@id/home_programmer_text_view"
+            app:layout_constraintEnd_toEndOf="@id/home_programmer_text_view" />
+
+        <TextView
+            android:id="@+id/home_designer_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_designer_text"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:background="@color/white"
+            android:textColor="@color/main_color"
+            app:layout_constraintTop_toBottomOf="@id/home_programmer_list_view"
+            app:layout_constraintStart_toStartOf="@id/home_programmer_text_view" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_designer_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/home_designer_text_view"
+            app:layout_constraintStart_toStartOf="@id/home_programmer_text_view"
+            app:layout_constraintEnd_toEndOf="@id/home_programmer_text_view" />
+
+        <TextView
+            android:id="@+id/home_planner_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_planner_text"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:background="@color/white"
+            android:textColor="@color/main_color"
+            app:layout_constraintTop_toBottomOf="@id/home_designer_list_view"
+            app:layout_constraintStart_toStartOf="@id/home_programmer_text_view" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_planner_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/home_planner_text_view"
+            app:layout_constraintStart_toStartOf="@id/home_programmer_text_view"
+            app:layout_constraintEnd_toEndOf="@id/home_programmer_text_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
