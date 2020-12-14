@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SampleViewpagerPageTransformer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="intro_title">Select TV</string>
+    <string name="intro_description">if you want to play game in tv version , choose this page</string>
+    <string name="intro2_title">Select Phone</string>
+    <string name="intro2_description">if you want to play game in Phone version , choose this page</string>
+</resources>
