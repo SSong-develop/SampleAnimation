@@ -38,7 +38,8 @@ class IntroPageTransformer(private var viewPager: ViewPager) : ViewPager.PageTra
     override fun onPageScrollStateChanged(state: Int) {
     }
 
-    private fun parallaxAnimation(page : View, position : Float){
+    // MARU
+    private fun parallaxAnimation(page : View, position : Float){ // 이녀석이 괜찮아 보입니다.
         val pagePosition = page.tag
         val pageWidth = page.width
         val pageWidthTimesPosition = pageWidth * position
@@ -80,6 +81,7 @@ class IntroPageTransformer(private var viewPager: ViewPager) : ViewPager.PageTra
         }
     }
 
+    // MARU
     private fun depthPageTransformAnimation(page : View, position : Float){
         val MIN_SCALE = 0.75f
         page.apply{
@@ -114,5 +116,31 @@ class IntroPageTransformer(private var viewPager: ViewPager) : ViewPager.PageTra
                 }
             }
         }
+    }
+
+    private fun depthScaleTransformAnimation(view : View, position : Float){
+        val scale = MIN_SCALE + (1 - MIN_SCALE) * (1 - abs(position))
+        val rotation = MAX_ROTATION * abs(position)
+
+        if (position <= 0f) {
+            view.translationX = view.width * -position * 0.19f
+            view.pivotY = 0.5f * view.height
+            view.pivotX = 0.5f * view.width
+            view.scaleX = scale
+            view.scaleY = scale
+            view.rotationY = rotation;
+        } else if (position <= 1f) {
+            view.translationX = view.width * -position * 0.19f
+            view.pivotY = 0.5f * view.height
+            view.pivotX = 0.5f * view.width
+            view.scaleX = scale
+            view.scaleY = scale
+            view.rotationY = -rotation
+        }
+    }
+
+    companion object {
+        const val MIN_SCALE = 0.5f
+        const val MAX_ROTATION = 30
     }
 }

@@ -12,7 +12,7 @@ class MainAdapter(fm: FragmentManager) :
     private lateinit var frag1 : IntroFragment
     private lateinit var frag2 : IntroFragment
 
-    override fun getCount(): Int = 2
+    override fun getCount(): Int = 4
 
     override fun getItem(position: Int): Fragment {
         return when(position){
@@ -33,5 +33,4 @@ class MainAdapter(fm: FragmentManager) :
             else -> frag2.getBackgroundColor()
         }
     }
-
 }
